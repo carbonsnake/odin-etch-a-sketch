@@ -17,17 +17,20 @@ body{
     display: flex;
     width: fit-content;
     margin-top: 6vw;
-    /* outline: 1px dotted purple; */
+    border: solid;
 }
 
 .square {
     width: 40px;
     aspect-ratio: 1/1;
     margin: 0;
-    outline: 1px solid black
+    outline: 1px solid black;
 }
 
 .column {
     width: fit-content;
-    /* outline: 2px dashed blue; */
+}
+
+.turn-purple {
+    background-color: rgb(117, 19, 159);
 }
