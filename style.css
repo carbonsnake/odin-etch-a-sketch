@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: fit-content;
+    margin-top: 6vw;
+    /* outline: 1px dotted purple; */
+}
+
+.square {
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin: 0;
+    outline: 1px solid black
+}
+
+.column {
+    width: fit-content;
+    /* outline: 2px dashed blue; */
+}
