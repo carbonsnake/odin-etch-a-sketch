@@ -22,17 +22,17 @@ function createGrid(side) {
     }
 
     const squares = document.querySelectorAll(".square");
-    
+
     squares.forEach((square) => {
         square.addEventListener("mouseenter", (e) => {
-            e.target.classList.add("turn-purple");
+            e.target.style.setProperty("background-color", randomRGBValues());
         })
 
-        square.addEventListener("mouseleave", (e) => {
-            setTimeout(() => {
-                e.target.classList.remove("turn-purple");
-            }, 50);
-        })
+        // square.addEventListener("mouseleave", (e) => {
+        //     setTimeout(() => {
+        //         e.target.classList.remove("turn-purple");
+        //     }, 50);
+        // })
     })
 }
 
@@ -55,5 +55,10 @@ btn.addEventListener("click", () => {
     }
 });
 
+function randomRGBValues() {
+    return `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`
+}
 
-
+function randomNum() {
+    return Math.floor(Math.random() * 256)
+}
