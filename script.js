@@ -25,7 +25,13 @@ function createGrid(side) {
 
     squares.forEach((square) => {
         square.addEventListener("mouseenter", (e) => {
-            e.target.style.setProperty("background-color", randomRGBValues());
+            if (e.target.style.getPropertyValue("background-color")) {
+                const currentOpacity = e.target.style.getPropertyValue("opacity");
+                e.target.style.setProperty("opacity", (Number(currentOpacity) + 0.1));
+            } else {
+                e.target.style.setProperty("background-color", randomRGBValues());
+                e.target.style.setProperty("opacity", 0.1);
+            }
         })
 
         // square.addEventListener("mouseleave", (e) => {
