@@ -12,6 +12,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: rgb(196, 178, 213);
 }
 
 .container {
@@ -19,10 +20,23 @@ body {
 	width: 700px;
 	height: 700px;
 	margin-top: 6vw;
+	outline: 8px solid rebeccapurple;
+	background-color: white;
+	border-radius: 5px;
 }
 
 .square {
 	aspect-ratio: 1/1;
 	margin: 0;
-	outline: 1px solid black;
+	outline: 1px solid rgba(0, 0, 0, 0.126);
+	border-radius: 5px;
+}
+
+button {
+	margin-top: 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	color: white;
+	background-color: rebeccapurple;
+	border-color: rebeccapurple;
 }
