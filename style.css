@@ -1,33 +1,28 @@
 html {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .container {
-    display: flex;
-    width: 700px;
-    height: 700px;
-    margin-top: 6vw;
+	display: flex;
+	width: 700px;
+	height: 700px;
+	margin-top: 6vw;
 }
 
 .square {
-    aspect-ratio: 1/1;
-    margin: 0;
-    outline: 1px solid black;
+	aspect-ratio: 1/1;
+	margin: 0;
+	outline: 1px solid black;
 }
-
-/* .turn-purple {
-    background-color: rgb(117, 19, 159);
-} */
