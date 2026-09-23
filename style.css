@@ -18,8 +18,7 @@ body {
 .container {
 	display: flex;
 	width: 700px;
-	height: 700px;
-	margin-top: 6vw;
+	aspect-ratio: 1/1;
 	outline: 8px solid rebeccapurple;
 	background-color: white;
 	border-radius: 5px;
@@ -33,10 +32,27 @@ body {
 }
 
 button {
-	margin-top: 10px;
-	font-size: 20px;
+	font-size: 18px;
 	border-radius: 5px;
 	color: white;
 	background-color: rebeccapurple;
 	border-color: rebeccapurple;
+	width: 140px;
+	padding: 5px;
+}
+
+.btns {
+	width: 700px;
+	display: flex;
+	justify-content:space-evenly;
+	margin: 20px;
+}
+
+h1 {
+	color: rebeccapurple;
+}
+
+h1,
+button {
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

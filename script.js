@@ -1,7 +1,8 @@
 "use strict";
 
 const container = document.querySelector(".container");
-const btn = document.querySelector("#prompt-btn");
+const dimensionsBtn = document.querySelector("#prompt-btn");
+const resetBtn = document.querySelector("#reset-btn");
 
 function createGrid(sides) {
 	const containerRule = [...document.styleSheets[0].cssRules].find(
@@ -54,9 +55,10 @@ function resetGrid() {
 		container.removeChild(container.firstChild);
 	}
 }
+let getSides;
 
-btn.addEventListener("click", () => {
-	let getSides = prompt(
+dimensionsBtn.addEventListener("click", () => {
+	getSides = prompt(
 		"please enter the number of squares per side.",
 		"e.g. enter '5' for a 5x5 grid",
 	);
@@ -66,6 +68,15 @@ btn.addEventListener("click", () => {
 	} else {
 		resetGrid();
 		createGrid(getSides);
+	}
+});
+
+resetBtn.addEventListener("click", () => {
+	resetGrid();
+	if (getSides) {
+		createGrid(getSides);
+	} else {
+		createGrid(16);
 	}
 });
 
